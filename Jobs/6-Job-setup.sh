@@ -24,13 +24,7 @@ source /etc/profile.d/OpenHPC_enviroment_variables.sh
 
 #exit 0
 echo ">>>>>>>>>> Install OpenMPI LAMMPS"
-yum -y --installroot=$CHROOT  remove lmod-ohpc 
-yum -y remove lmod-ohpc 
-yum -y --installroot=$CHROOT install /home/user/Jobs/*.rpm
-yum -y install /home/user/Jobs/*.rpm
 
-yum -y --installroot=$CHROOT install libgfortran libgomp python-virtualenv
-yum -y install libgfortran libgomp python-virtualenv
 
 rpm -y --root=$CHROOT --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro 
 rpm -y --root=$CHROOT -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-1.el7.nux.noarch.rpm
@@ -38,10 +32,11 @@ rpm -y --root=$CHROOT -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-d
 rpm --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro 
 rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-1.el7.nux.noarch.rpm
 
-yum -y --installroot=$CHROOT makecache
-yum  makecache
+yum -y --installroot=$CHROOT  remove lmod-ohpc 
+yum -y remove lmod-ohpc 
 
-yum -y --installroot=$CHROOT install ffmpeg
-yum -y install ffmpeg
+yum -y --installroot=$CHROOT install ffmpeg libgfortran libgomp python-virtualenv *.rpm  makecache
+yum -y install ffmpeg libgfortran libgomp python-virtualenv *.rpm  makecache
+yum  makecache
 
 
