@@ -17,4 +17,9 @@ yum -y --installroot=$CHROOT install ffmpeg libgfortran libgomp python-virtualen
 yum -y install ffmpeg libgfortran libgomp python-virtualenv RPMS/*.rpm  makecache
 yum  makecache
 
+vitualenv mdbenv
+source mdbenv/bin/activate
+pip install -r requirements.txt
+deactivate
+
 
