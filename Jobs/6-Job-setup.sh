@@ -19,6 +19,7 @@ yum  makecache
 
 virtualenv mdbenv
 source mdbenv/bin/activate
+pip install --upgrade pip
 pip install -r Mandelbrot/requirements.txt
 deactivate
 
