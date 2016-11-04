@@ -26,8 +26,8 @@ source /etc/profile.d/OpenHPC_enviroment_variables.sh
 echo ">>>>>>>>>> Install OpenMPI LAMMPS"
 
 
-rpm -y --root=$CHROOT --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro 
-rpm -y --root=$CHROOT -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-1.el7.nux.noarch.rpm
+rpm  --root=$CHROOT --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro 
+rpm  --root=$CHROOT -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-1.el7.nux.noarch.rpm
 
 rpm --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro 
 rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-1.el7.nux.noarch.rpm
