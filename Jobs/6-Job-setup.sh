@@ -13,16 +13,16 @@ source /etc/profile.d/OpenHPC_enviroment_variables.sh
 
 
 
-echo ">>>>>>>>> Compiler OpenMPI til noder"
-yum -y install flex gcc-c++
-wget https://www.open-mpi.org/nightly/v1.10/openmpi-v1.10.4-31-g6a5fe29.tar.bz2
-tar xf openmpi-v1.10.4-31-g6a5fe29.tar.bz2
-cd openmpi-v1.10.4-31-g6a5fe29
-./configure --prefix=$CHROOT/usr/local --disable-dlopen
-make all install
+#echo ">>>>>>>>> Compiler OpenMPI til noder"
+#yum -y install flex gcc-c++
+#wget https://www.open-mpi.org/nightly/v1.10/openmpi-v1.10.4-31-g6a5fe29.tar.bz2
+#tar xf openmpi-v1.10.4-31-g6a5fe29.tar.bz2
+#cd openmpi-v1.10.4-31-g6a5fe29
+#./configure --prefix=$CHROOT/usr/local --disable-dlopen
+#make all install
 
 
-exit 0
+#exit 0
 echo ">>>>>>>>>> Install OpenMPI LAMMPS"
 yum --installroot=$CHROOT  remove lmod-ohpc 
 yum --installroot=$CHROOT install /home/user/Jobs/*.rpm
