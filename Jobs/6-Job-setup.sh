@@ -14,7 +14,7 @@ yum -y --installroot=$CHROOT  remove lmod-ohpc
 yum -y remove lmod-ohpc 
 
 yum -y --installroot=$CHROOT install ffmpeg libgfortran libgomp python-virtualenv RPMS/*.rpm  makecache gcc-c++ gcc
-yum -y install ffmpeg libgfortran libgomp python-virtualenv RPMS/*.rpm  makecache
+yum -y install ffmpeg libgfortran libgomp python-virtualenv RPMS/*.rpm  makecache gcc-c++ gcc
 yum  makecache
 
 virtualenv mdbenv
