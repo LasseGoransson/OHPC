@@ -1,3 +1,2 @@
-image==1.5.5
 mpi4py==2.0.0
 Pillow==3.4.2
