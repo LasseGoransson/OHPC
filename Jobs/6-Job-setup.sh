@@ -13,7 +13,7 @@ rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-1.
 yum -y --installroot=$CHROOT  remove lmod-ohpc 
 yum -y remove lmod-ohpc 
 
-yum -y --installroot=$CHROOT install ffmpeg libgfortran libgomp python-virtualenv RPMS/*.rpm  makecache gcc-c++
+yum -y --installroot=$CHROOT install ffmpeg libgfortran libgomp python-virtualenv RPMS/*.rpm  makecache gcc-c++ gcc
 yum -y install ffmpeg libgfortran libgomp python-virtualenv RPMS/*.rpm  makecache
 yum  makecache
 
