@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+source /etc/profile.d/OpenHPC_enviroment_variables.sh
+
+IP=${bmc_ipaddr[0]}
+echo "$IP"
+for ((i=0; i < ${num_computes}; i++)) ; do ipmitool -E -I lanplus -H ${bmc_ipaddr[i]} -U ${bmc_username} -P ${bmc_password} chassis power $1 ; done
+

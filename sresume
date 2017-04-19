@@ -1,0 +1,5 @@
+#!/bin/bash -v
+scontrol update NodeName=node[1-2] State=DOWN Reason="Undraining"
+scontrol update NodeName=node[1-2] State=RESUME
+
+
